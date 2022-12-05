@@ -1,0 +1,52 @@
+table{
+    /* margin: auto; */
+    border: 1px solid brown;
+    text-align: center;
+    border-radius: 5px;
+}
+
+thead{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+td{
+    border: 1px solid brown;
+    padding: 5px;
+}
+
+.sort-title:hover{
+    cursor: pointer;
+    color: rgb(185, 150, 70);
+}
+
+.sort-price:hover{
+    cursor: pointer;
+    color: rgb(185, 150, 70);
+}
+
+.actions {
+    color: rgb(145, 97, 38);
+    border:0;
+    border-radius: .2em;
+    padding: 6px 10px;
+    margin: 2px;
+    cursor: pointer;  
+    border: 1px solid brown;  
+}
+
+.actions:hover {
+    background-color: rgb(221, 204, 167);
+}
+
+.btn-read{
+    background-color: rgb(217, 212, 212);
+}
+
+.btn-update{
+    background-color: rgb(233, 222, 188);  
+}
+
+.btn-delete{
+    background-color: rgb(248, 218, 208);
+}

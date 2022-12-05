@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Book Store</title>
+</head>
+
+<body onload="onInit()">
+
+    <h1>Online Book Store</h1>
+
+    <span class="main-content">
+
+        <div class="create" onclick="onAddBook()">Create new book</div>
+
+        <span class="filter">
+            <form>
+                <input type="text" name="search" onkeyup="onKeyUpSearch()" placeholder="Type here to search">
+            </form>
+            <label>
+                Maximum Price
+                <input type="range" min="0" max="300" value="300" class="filter-price-range"
+                    onchange="this.title=this.value;onSetFilterBy({maxPrice: this.value})" />
+            </label>
+            <label>
+                Minimum Rate
+                <input type="range" min="0" max="10" value="0" class="filter-rate-range"
+                    onchange="this.title=this.value;onSetFilterBy({minRate: this.value})" />
+            </label>
+            <span class="page"></span>
+        </span>
+
+        <table>
+            <thead>
+                <td>Id</td>
+                <td class="sort-title" onclick="onSortBooks('title')">Title</td>
+                <td class="sort-price" onclick="onSortBooks('price')">Price</td>
+                <td colspan="3">Actions</td>
+            </thead>
+            <tbody class="books-container">
+            </tbody>
+        </table>
+
+    </span>
+
+    <!-- <h2>Filter</h2>
+        
+        <hr />
+        <div>
+            Sort by:
+            <select class="sort-by" onchange="onSetSortBy()">
+                <option value="">Select Sorting</option>
+                <option value="vendor">By Vendor</option>
+                <option value="maxSpeed">Speed</option>
+            </select>
+            <label>
+                Descending
+                <input class="sort-desc" type="checkbox" onchange="onSetSortBy()" />
+            </label>
+        </div>
+    <button title="Add Car" onclick="onAddCar()">Add Car</button>
+    <button onclick="onNextPage()">Next Page</button>
+    <section class="cars-container"></section> -->
+
+    <div class="modal">
+        <button onclick="onCloseModal()">X</button>
+        <span class="txt">
+            <h4>Book Details</h4>
+            <h5></h5>
+            <p></p>
+            <div class="book-img"></div>
+        </span>
+        <div class="to-rate">
+            <span class="change-rate">
+                <button class="minus-btn" onclick="onChangeRateBook('lower')">-</button>
+                <span class="book-rate-value">0</span>
+                <button class="plus-btn" onclick="onChangeRateBook('higher')">+</button>
+            </span>
+            <button class="rate-btn" onclick="onRateBook()">Rate</button>
+        </div>
+        <span class="after-rate-msg">You rated this book <span></span></span>
+    </div>
+
+    <div class="user-msg"></div>
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
+</body>
+
+</html>

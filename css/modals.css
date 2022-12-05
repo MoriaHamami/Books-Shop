@@ -1,0 +1,85 @@
+.modal {
+    background-color: rgb(68, 9, 9);
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 150%;
+    height: 80vh;
+    min-width: 300px;
+    color: rgb(178, 150, 101);
+}
+
+.modal.open {
+    left: 50%;
+    transition: left .5s;
+}
+
+.modal h5 {
+    text-transform: capitalize;
+    color: rgb(255, 217, 192);
+    text-decoration: overline;
+    font-size: 17px;
+}
+
+.modal h4 {
+    font-size: 17px;
+}
+
+img{
+    height: 110px;
+}
+
+.txt {
+    text-align: center;
+}
+
+.modal p {
+    text-align: left;
+    padding: 15px;
+}
+
+.user-msg {
+    position: fixed;
+    bottom: -100px;
+    right: 10px;
+    background-color: rgb(68, 9, 9);
+    padding: 10px;
+    color: rgb(255, 217, 192);
+}
+
+.user-msg.open {
+    bottom: 10px;
+    transition: bottom .5s;
+}
+
+.modal button {
+    background-color: rgb(229, 201, 159);
+    cursor: pointer;
+    color: rgb(124, 52, 52);
+}
+
+.modal button:hover{
+    background-color: rgb(177, 145, 75);
+}
+
+.to-rate {
+    text-align: center;
+}
+
+.to-rate button {
+    /* margin: auto; */
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.rate-btn {
+    padding: 6px;
+    margin-left:15px;
+}
+
+.change-rate{
+    background-color: rgb(208, 170, 94);
+    padding: 6px;
+    border-radius: 3px;
+    color: rgb(80, 33, 33);
+}
